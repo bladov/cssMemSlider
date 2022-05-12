@@ -1,0 +1,41 @@
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vh;
+    padding: 2em;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(10, 51, 75), rgb(0,255,200));
+}
+.slider {
+    padding: 0.5em;
+    background: linear-gradient(220deg, rgba(207, 16, 16, 0.76), rgba(223, 208, 11, 0.945));
+}
+
+.wrapper {
+}
+
+.slider__wrapper {
+    position: relative;
+    max-width: 36em;
+    overflow: hidden;
+}
+
+.slider__img {
+    max-width: 100%;
+    margin-bottom: 3em;
+}
+
+.slider__img-wrapper {
+    display: flex;
+}
+
+.slider__text-wrapper {
+    display: flex;
+}
+
+.elem1 {
+    margin-right: 100px;
+}
+
