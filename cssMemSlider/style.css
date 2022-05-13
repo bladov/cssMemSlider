@@ -13,13 +13,13 @@
     column-gap: 3%;
     display: grid;
     padding: 0.5em;
-    grid-template-columns: 1fr min-content min-content min-content;
+    grid-template-columns: 1fr min-content min-content min-content min-content;
     grid-template-rows: 1fr max-content;
     background: linear-gradient(220deg, rgba(207, 16, 16, 0.76), rgba(223, 208, 11, 0.945));
 }
 
 .slider {
-    grid-column: 1 / 5;
+    grid-column: 1 / 6;
     grid-row: 1 / 2;
     margin-bottom: 5%;
 }
@@ -36,6 +36,7 @@
     margin: 0;
     grid-row: 2 / 3;
     justify-self: end;
+    cursor: pointer;
 }
 
 .contactChoice1 {
@@ -50,18 +51,23 @@
     grid-column: 4 / 5;
 }
 
+.contactChoice4 {
+    grid-column: 5 / 6;
+}
+
 
 .slider__wrapper {
-    max-width: 500px;
+    max-width: 25rem;
     overflow: hidden;
 }
 
 .slider__img {
     display: block;
     flex: 1 0 auto;
-    width: 500px;
-    height: 300px;
+    width: 25rem;
+    height: 20rem;
 }
+
 
 .slider__img-wrapper {
     display: flex;
@@ -71,9 +77,17 @@
 .slider__text-wrapper {
     display: flex;
     overflow: hidden;
+    max-width: 100%;
+    height: 120%;
 }
 
-.elem1 {
+.text__content {
+    display: flex;
+    transition: 1s;
+}
+
+.slider__text {
+    margin-right: 100%;
 }
 
 
@@ -90,3 +104,38 @@
 #contactChoice3:checked ~ .slider .slider__img-wrapper {
     margin-left: -200%;
 }
+
+#contactChoice4:checked ~ .slider .slider__img-wrapper {
+    margin-left: -300%;
+}
+
+/* text */
+#contactChoice1:checked ~ .slider__text-wrapper .text__content{
+    margin-left: 0;
+}
+
+#contactChoice2:checked ~ .slider__text-wrapper .text__content{
+    margin-left: -120%;
+}
+
+#contactChoice3:checked ~ .slider__text-wrapper .text__content{
+    margin-left: -243%;
+}
+
+#contactChoice4:checked ~ .slider__text-wrapper .text__content{
+    margin-left: -370%;
+}
+
+/* input[type='radio']:checked {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500 !important;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid red;
+} */
